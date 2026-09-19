@@ -8,11 +8,11 @@
     "Segoe UI",
     sans-serif;
 
-  color: #f2f4f7;
-  background: #07090c;
-
+  color: #e8ebef;
+  background: #080a0d;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -22,14 +22,14 @@
 html,
 body,
 #root {
-  margin: 0;
   width: 100%;
   min-height: 100%;
-  height: 100%;
+  margin: 0;
 }
 
 body {
-  background: #07090c;
+  min-width: 1100px;
+  background: #080a0d;
 }
 
 button {
@@ -38,75 +38,79 @@ button {
 
 .app {
   min-height: 100vh;
-
   background:
     radial-gradient(
-      circle at 50% 30%,
-      rgba(54, 65, 81, 0.16),
-      transparent 40%
+      circle at 50% 20%,
+      rgba(45, 52, 62, 0.12),
+      transparent 42%
     ),
-    #07090c;
+    #080a0d;
 }
 
-/* TOP BAR */
+/* =========================
+   TOP BAR
+   ========================= */
 
 .topbar {
-  height: 68px;
-
-  border-bottom: 1px solid #1b2027;
+  height: 64px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 24px;
+  padding: 0 22px;
 
-  background: rgba(7, 9, 12, 0.9);
+  border-bottom: 1px solid #171b21;
+
+  background: rgba(9, 11, 14, 0.96);
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
 }
 
 .brand-mark {
   width: 34px;
   height: 34px;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border: 1px solid #2a3038;
-  border-radius: 9px;
+  border: 1px solid #252b33;
+  border-radius: 8px;
 
-  background: #10141a;
+  color: #aab2bd;
+  background: #0d1014;
 }
 
 .brand-name {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  color: #e5e8ec;
 }
 
 .brand-subtitle {
-  margin-top: 2px;
+  margin-top: 3px;
 
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 0.12em;
 
-  color: #737b87;
+  color: #555e69;
 }
 
 .topbar-status {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 0.12em;
 
-  color: #8d96a3;
+  color: #69727d;
 }
 
 .status-dot {
@@ -115,163 +119,189 @@ button {
 
   border-radius: 50%;
 
-  background: #7dd3a5;
+  background: #78818d;
 }
 
-/* WORKSPACE */
+/* =========================
+   MAIN WORKSPACE
+   ========================= */
 
 .workspace {
-  height: calc(100vh - 68px);
+  min-height: calc(100vh - 64px);
 
   display: grid;
-
-  grid-template-columns:
-    210px
-    minmax(500px, 1fr)
-    250px;
+  grid-template-columns: 210px minmax(0, 1fr) 250px;
 }
 
-/* SIDEBAR */
+/* =========================
+   SIDEBAR
+   ========================= */
 
 .sidebar {
   position: relative;
 
-  border-right: 1px solid #1b2027;
+  display: flex;
+  flex-direction: column;
 
-  padding: 24px 14px;
+  padding: 22px 14px;
 
-  background: #090c10;
+  border-right: 1px solid #171b21;
+
+  background: #0a0c10;
 }
 
 .section-label {
-  font-size: 9px;
-  letter-spacing: 0.15em;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
 
-  color: #68717d;
-
-  margin-bottom: 12px;
+  color: #555e69;
 }
 
 .section-label.second {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .case-card {
-  width: 100%;
+  margin-top: 10px;
+
+  min-height: 58px;
 
   display: flex;
   align-items: center;
-
   gap: 10px;
 
-  padding: 10px;
+  padding: 9px 10px;
 
-  border: 1px solid transparent;
-  border-radius: 9px;
+  border: 1px solid #1c2229;
+  border-radius: 8px;
 
-  color: #c9cfd7;
+  color: #737d88;
+  background: #0d1014;
 }
 
 .case-card.active {
+  border-color: #2a313a;
   background: #10141a;
-
-  border-color: #242b34;
 }
 
 .case-icon {
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 31px;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-radius: 7px;
+  border-radius: 6px;
 
-  background: #181d24;
+  color: #929ba6;
+  background: #151a20;
 }
 
 .case-info {
+  min-width: 0;
+
   flex: 1;
 
   display: flex;
   flex-direction: column;
-
   gap: 3px;
 }
 
 .case-info strong {
-  font-size: 11px;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+
+  color: #d1d6dc;
 }
 
 .case-info span {
-  font-size: 9px;
-
-  color: #69727e;
+  font-size: 8px;
+  color: #5e6772;
 }
 
-.layer-row,
-.settings-button {
+.layer-row {
   width: 100%;
-
-  border: 0;
-
-  background: transparent;
-
-  color: #929aa5;
 
   display: flex;
   align-items: center;
-
-  gap: 10px;
+  gap: 9px;
 
   padding: 9px 8px;
+
+  border: 0;
+  border-radius: 6px;
+
+  color: #818a95;
+  background: transparent;
+
+  font-size: 9px;
 
   text-align: left;
 
   cursor: pointer;
-
-  border-radius: 7px;
-
-  font-size: 11px;
 }
 
-.layer-row:hover,
-.settings-button:hover {
-  background: #11151b;
-
-  color: #d8dde4;
+.layer-row:hover {
+  background: #10141a;
+  color: #b1b8c1;
 }
 
 .layer-indicator {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 
   border-radius: 2px;
 
-  background: #5e6672;
+  background: #717a85;
 }
 
 .layer-indicator.brain {
-  background: #87909c;
+  background: #89929d;
 }
 
 .layer-indicator.tumor {
-  background: #d8a0a0;
+  background: #a1a8b1;
 }
 
 .layer-indicator.vessels {
-  background: #8ca6c4;
+  background: #636d78;
 }
 
 .sidebar-bottom {
-  position: absolute;
-
-  left: 14px;
-  right: 14px;
-  bottom: 18px;
+  margin-top: auto;
 }
 
-/* VIEWER */
+.settings-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 8px;
+
+  border: 1px solid #1c2229;
+  border-radius: 6px;
+
+  color: #68717c;
+  background: #0d1014;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+.settings-button:hover {
+  color: #a0a8b2;
+  background: #11151a;
+}
+
+/* =========================
+   VIEWER
+   ========================= */
 
 .viewer-area {
   min-width: 0;
@@ -279,108 +309,117 @@ button {
   display: flex;
   flex-direction: column;
 
-  background: #080b0f;
+  background: #080a0d;
 }
 
 .viewer-header {
-  min-height: 70px;
+  min-height: 64px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 16px 20px;
+  padding: 0 18px;
 
-  border-bottom: 1px solid #181d24;
+  border-bottom: 1px solid #171b21;
 }
 
 .viewer-title {
-  font-size: 13px;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
 
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
+  color: #dfe3e8;
 }
 
 .viewer-description {
   margin-top: 4px;
 
-  color: #68717d;
+  font-size: 8px;
 
-  font-size: 10px;
+  color: #555e69;
 }
 
 .viewer-tools {
   display: flex;
-
+  align-items: center;
   gap: 6px;
 }
 
 .viewer-tools button {
   display: flex;
   align-items: center;
-
   gap: 6px;
 
-  border: 1px solid #252c35;
+  padding: 7px 9px;
 
-  background: #0d1116;
+  border: 1px solid #1c2229;
+  border-radius: 5px;
 
-  color: #929ba7;
+  color: #737c87;
+  background: #0d1014;
 
-  padding: 7px 10px;
-
-  border-radius: 6px;
-
-  font-size: 9px;
+  font-size: 8px;
 
   cursor: pointer;
 }
 
-/* VIEWER GRID */
+.viewer-tools button:hover {
+  color: #aab1ba;
+  background: #11151a;
+}
+
+/* =========================
+   VIEWER GRID
+   ========================= */
 
 .viewer-grid {
   flex: 1;
 
-  min-height: 0;
-
-  padding: 14px;
-
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
-
+  grid-template-columns: 1.35fr 1fr;
   grid-template-rows: 1fr 1fr;
 
-  gap: 10px;
+  gap: 8px;
+
+  padding: 8px;
+
+  min-height: 0;
 }
 
 .scan-panel {
   position: relative;
 
+  min-width: 0;
+  min-height: 0;
+
   overflow: hidden;
 
-  border: 1px solid #20262e;
-
-  border-radius: 9px;
+  border: 1px solid #181d24;
+  border-radius: 7px;
 
   background:
     radial-gradient(
-      circle,
-      rgba(78, 89, 105, 0.12),
-      transparent 65%
+      circle at center,
+      rgba(70, 77, 87, 0.08),
+      transparent 58%
     ),
     #0b0e12;
+}
+
+.scan-panel.large {
+  grid-row: span 2;
 }
 
 .scan-panel.three-d {
   background:
     radial-gradient(
-      circle at 50% 45%,
-      rgba(102, 113, 128, 0.14),
-      transparent 55%
+      circle at center,
+      rgba(90, 98, 109, 0.09),
+      transparent 60%
     ),
-    #0b0e12;
+    #090c10;
 }
 
 .panel-label {
@@ -389,172 +428,221 @@ button {
   top: 11px;
   left: 12px;
 
-  z-index: 2;
+  z-index: 5;
 
   font-size: 8px;
+  font-weight: 600;
 
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
 
-  color: #717a86;
+  color: #5e6772;
+
+  pointer-events: none;
 }
 
 .scan-placeholder {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
 
   display: flex;
-
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  flex-direction: column;
+  gap: 10px;
 
-  gap: 9px;
-
-  color: #555f6c;
+  color: #3f4751;
 }
 
 .scan-placeholder span {
-  font-size: 10px;
-
-  color: #69727e;
+  font-size: 9px;
+  letter-spacing: 0.04em;
 }
 
 .scan-placeholder small {
   font-size: 8px;
-
-  color: #414953;
+  color: #343b44;
 }
 
 .brain-orbit {
-  width: 160px;
-  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  display: grid;
-  place-items: center;
+  color: #626b76;
 
-  border: 1px solid #242b34;
-
-  border-radius: 50%;
-
-  color: #6d7783;
+  animation: slowFloat 5s ease-in-out infinite;
 }
 
-/* CASE PANEL */
+@keyframes slowFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* =========================
+   3D VIEWER
+   ========================= */
+
+.three-d-viewer {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+}
+
+.three-d-viewer canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+}
+
+.three-d-overlay {
+  position: absolute;
+
+  left: 12px;
+  bottom: 11px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.three-d-overlay span {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+
+  color: #89929e;
+}
+
+.three-d-overlay small {
+  font-size: 8px;
+
+  color: #515a66;
+}
+
+/* =========================
+   CASE PANEL
+   ========================= */
 
 .case-panel {
-  border-left: 1px solid #1b2027;
+  padding: 22px 17px;
 
-  padding: 24px 18px;
+  border-left: 1px solid #171b21;
 
-  background: #090c10;
+  background: #0a0c10;
 }
 
 .case-panel h1 {
-  margin: 0;
+  margin: 20px 0 8px;
 
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 500;
 
-  font-weight: 600;
-
-  letter-spacing: -0.02em;
+  color: #dfe3e8;
 }
 
 .case-description {
-  margin-top: 9px;
+  max-width: 200px;
 
-  color: #6f7884;
+  margin: 0;
 
-  font-size: 11px;
+  font-size: 9px;
+  line-height: 1.65;
 
-  line-height: 1.6;
+  color: #626b76;
 }
 
 .metadata {
-  margin-top: 30px;
+  margin-top: 28px;
 
-  border-top: 1px solid #1b2027;
+  display: flex;
+  flex-direction: column;
 
-  border-bottom: 1px solid #1b2027;
+  border-top: 1px solid #171c22;
 }
 
-.metadata div {
+.metadata > div {
   display: flex;
-
+  align-items: center;
   justify-content: space-between;
 
-  padding: 13px 0;
+  padding: 11px 0;
 
-  border-bottom: 1px solid #151a20;
-}
-
-.metadata div:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid #171c22;
 }
 
 .metadata span {
-  font-size: 8px;
+  font-size: 7px;
+  letter-spacing: 0.14em;
 
-  letter-spacing: 0.13em;
-
-  color: #606975;
+  color: #555e69;
 }
 
 .metadata strong {
-  font-size: 9px;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 
-  color: #b6bec8;
+  color: #a4acb6;
 }
 
 .tumor-summary {
-  margin-top: 20px;
-
-  padding: 12px;
-
-  border: 1px solid #242a32;
-
-  border-radius: 8px;
+  margin-top: 22px;
 
   display: flex;
   align-items: center;
-
   gap: 10px;
 
-  background: #0d1116;
+  padding: 11px;
+
+  border: 1px solid #1b2027;
+  border-radius: 7px;
+
+  background: #0d1014;
 }
 
 .summary-icon {
   width: 30px;
   height: 30px;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-radius: 7px;
+  border-radius: 6px;
 
-  background: #181d24;
-
-  color: #aeb6c1;
+  color: #89929d;
+  background: #151a20;
 }
 
 .tumor-summary div:last-child {
   display: flex;
-
   flex-direction: column;
-
   gap: 3px;
 }
 
 .tumor-summary span {
-  font-size: 8px;
-
+  font-size: 7px;
   letter-spacing: 0.12em;
 
-  color: #626b77;
+  color: #555e69;
 }
 
 .tumor-summary strong {
-  font-size: 10px;
+  font-size: 9px;
+  font-weight: 500;
 
-  color: #b9c0c9;
+  color: #9da5ae;
 }
