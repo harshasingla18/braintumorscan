@@ -77,9 +77,7 @@ function App() {
         <section className="viewer-area">
           <div className="viewer-header">
             <div>
-              <div className="viewer-title">
-                CASE 001
-              </div>
+              <div className="viewer-title">CASE 001</div>
 
               <div className="viewer-description">
                 Brain MRI · Research visualization
@@ -101,55 +99,39 @@ function App() {
 
           <div className="viewer-grid">
             <div className="scan-panel large">
-              <div className="panel-label">
-                AXIAL
-              </div>
+              <div className="panel-label">AXIAL</div>
 
               <div className="scan-placeholder">
                 <Brain size={58} strokeWidth={1} />
 
-                <span>
-                  Axial imaging view
-                </span>
+                <span>Axial imaging view</span>
 
-                <small>
-                  Demo volume
-                </small>
+                <small>Demo volume</small>
               </div>
             </div>
 
             <div className="scan-panel">
-              <div className="panel-label">
-                CORONAL
-              </div>
+              <div className="panel-label">CORONAL</div>
 
               <div className="scan-placeholder">
                 <Brain size={42} strokeWidth={1} />
 
-                <span>
-                  Coronal view
-                </span>
+                <span>Coronal view</span>
               </div>
             </div>
 
             <div className="scan-panel">
-              <div className="panel-label">
-                SAGITTAL
-              </div>
+              <div className="panel-label">SAGITTAL</div>
 
               <div className="scan-placeholder">
                 <Brain size={42} strokeWidth={1} />
 
-                <span>
-                  Sagittal view
-                </span>
+                <span>Sagittal view</span>
               </div>
             </div>
 
             <div className="scan-panel three-d">
-              <div className="panel-label">
-                3D RECONSTRUCTION
-              </div>
+              <div className="panel-label">3D RECONSTRUCTION</div>
 
               <ThreeDViewer />
             </div>
@@ -157,15 +139,12 @@ function App() {
         </section>
 
         <aside className="case-panel">
-          <div className="section-label">
-            CASE INFORMATION
-          </div>
+          <div className="section-label">CASE INFORMATION</div>
 
           <h1>Brain MRI</h1>
 
           <p className="case-description">
-            Interactive visualization of a
-            de-identified neuroimaging case.
+            Interactive visualization of a de-identified neuroimaging case.
           </p>
 
           <div className="metadata">
