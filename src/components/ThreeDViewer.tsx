@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 function BrainModel() {
   return (
     <mesh rotation={[0.2, 0.3, 0]}>
-      <icosahedronGeometry args={[1.4, 4]} />
+      <icosahedronGeometry args={[1.1, 4]} />
 
       <meshStandardMaterial
         color="#8d96a3"
@@ -21,8 +21,12 @@ export default function ThreeDViewer() {
   return (
     <div className="three-d-viewer">
       <Canvas
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
         camera={{
-          position: [0, 0, 4],
+          position: [0, 0, 3.5],
           fov: 45,
         }}
       >
@@ -55,3 +59,4 @@ export default function ThreeDViewer() {
     </div>
   );
 }
+
