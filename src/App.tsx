@@ -20,6 +20,7 @@ function App() {
 
           <div>
             <div className="brand-name">SCAN EXPLORER</div>
+
             <div className="brand-subtitle">
               NEUROIMAGING RESEARCH PLATFORM
             </div>
@@ -131,7 +132,9 @@ function App() {
             </div>
 
             <div className="scan-panel three-d">
-              <div className="panel-label">3D RECONSTRUCTION</div>
+              <div className="panel-label">
+                3D RECONSTRUCTION
+              </div>
 
               <ThreeDViewer />
             </div>
@@ -144,7 +147,8 @@ function App() {
           <h1>Brain MRI</h1>
 
           <p className="case-description">
-            Interactive visualization of a de-identified neuroimaging case.
+            Interactive visualization of a de-identified
+            neuroimaging case.
           </p>
 
           <div className="metadata">
@@ -181,3 +185,4 @@ function App() {
 }
 
 export default App;
+
