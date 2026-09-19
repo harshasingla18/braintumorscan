@@ -7,6 +7,8 @@ import {
   Settings2,
 } from "lucide-react";
 
+import ThreeDViewer from "./components/ThreeDViewer";
+
 function App() {
   return (
     <div className="app">
@@ -149,15 +151,7 @@ function App() {
                 3D RECONSTRUCTION
               </div>
 
-              <div className="scan-placeholder">
-                <div className="brain-orbit">
-                  <Brain size={86} strokeWidth={0.8} />
-                </div>
-
-                <span>
-                  Interactive 3D volume
-                </span>
-              </div>
+              <ThreeDViewer />
             </div>
           </div>
         </section>
