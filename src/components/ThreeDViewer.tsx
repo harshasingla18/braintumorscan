@@ -1,29 +1,19 @@
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Float,
-  Environment,
-} from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 
 function BrainModel() {
   return (
-    <Float
-      speed={1}
-      rotationIntensity={0.15}
-      floatIntensity={0.2}
-    >
-      <mesh rotation={[0.15, 0.2, 0]}>
-        <icosahedronGeometry args={[1.55, 5]} />
+    <mesh rotation={[0.2, 0.3, 0]}>
+      <icosahedronGeometry args={[1.4, 4]} />
 
-        <meshStandardMaterial
-          color="#8d96a3"
-          roughness={0.75}
-          metalness={0.05}
-          transparent
-          opacity={0.72}
-        />
-      </mesh>
-    </Float>
+      <meshStandardMaterial
+        color="#8d96a3"
+        roughness={0.7}
+        metalness={0.05}
+        transparent
+        opacity={0.8}
+      />
+    </mesh>
   );
 }
 
@@ -32,7 +22,7 @@ export default function ThreeDViewer() {
     <div className="three-d-viewer">
       <Canvas
         camera={{
-          position: [0, 0, 4.5],
+          position: [0, 0, 4],
           fov: 45,
         }}
       >
@@ -44,18 +34,16 @@ export default function ThreeDViewer() {
         />
 
         <directionalLight
-          position={[-4, -2, -3]}
+          position={[-3, -2, -4]}
           intensity={1}
         />
-
-        <Environment preset="studio" />
 
         <BrainModel />
 
         <OrbitControls
           enableDamping
           dampingFactor={0.08}
-          minDistance={2.5}
+          minDistance={2}
           maxDistance={7}
         />
       </Canvas>
