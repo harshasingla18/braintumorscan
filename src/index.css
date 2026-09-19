@@ -85,7 +85,7 @@ body {
   min-width: 0;
   min-height: 0;
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr) 250px;
+  grid-template-columns: 190px minmax(0, 1fr) 220px;
   overflow: hidden;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .case-panel {
-  padding: 24px 18px;
+  padding: 24px 14px;
   border-left: 1px solid #1b2027;
 }
 
@@ -349,6 +349,7 @@ body {
 .metadata > div {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid #181d24;
 }
@@ -361,6 +362,7 @@ body {
 .metadata strong {
   color: #b8c0ca;
   font-size: 9px;
+  text-align: right;
 }
 
 .tumor-summary {
@@ -379,6 +381,7 @@ body {
   height: 30px;
   display: grid;
   place-items: center;
+  flex: 0 0 30px;
   border-radius: 7px;
   background: #171c23;
 }
